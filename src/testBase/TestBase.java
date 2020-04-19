@@ -1,24 +1,36 @@
 package testBase;
 
 import baseConfig.BaseClass;
-import org.testng.annotations.Test;
-
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.*;
 
 public class TestBase extends BaseClass {
-    //WebDriver driver;
 
-    /*public TestBase(WebDriver driver) {
-        this.driver = driver;
-    }*/
 
-    @Test
+    @BeforeClass
     void setUp()throws Exception {
         init();
     }
 
-   /* public static void main(String[] args)throws Exception{
+    @Test(priority = 1)
+    void logoTest(){
+        WebElement logo = driver.findElement(By.xpath("//*[@id=\"divLogo\"]/img"));
+        //Assert.assertTrue(logo.isDisplayed(),"logo not displayed");
+        Assert.assertFalse(logo.isDisplayed(),"logo is displayed");
+    }
 
-        BaseClass ob = new BaseClass();
-            ob.init();
-    }*/
+    @Test(priority = 2)
+    void homeTitle(){
+        String titlePar = driver.getTitle();
+        //Assert.assertEquals("OrangeHRM1",titlePar,"title is not matched");
+        Assert.assertEquals(titlePar,"OrangeHRM1","title is not matched");
+    }
+
+    @AfterClass
+    void beforeClass2(){
+        browserClose();
+    }
 }
