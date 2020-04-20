@@ -36,6 +36,7 @@ public class PassingDataToTheApplicationFromExcelSheet {
         for (int row=1;row<rowCount;row++){
 
             XSSFRow currentRow = sheet.getRow(row);
+
             String getFName = currentRow.getCell(0).getStringCellValue();
             String getLName = currentRow.getCell(1).getStringCellValue();
             String getPhone = currentRow.getCell(2).toString();
