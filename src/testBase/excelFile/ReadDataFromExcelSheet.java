@@ -28,7 +28,7 @@ public class ReadDataFromExcelSheet {
         //System.out.println(countCell);
 
         //get current row
-        for (int i=0;i<rowCount;i++){
+        for (int i=0;i<=rowCount;i++){
            XSSFRow storeCurrentRow = sheet.getRow(i);
             //System.out.println(sheet.getRow(i));
 

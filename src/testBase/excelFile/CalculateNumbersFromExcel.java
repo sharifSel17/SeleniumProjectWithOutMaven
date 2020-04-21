@@ -20,7 +20,7 @@ public class CalculateNumbersFromExcel {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.moneycontrol.com/fixed-income/calculator/yes-bank/fixed-deposit-calculator-YB-BYB001.html?classic=true");
 
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         //create an object to read data from excel for FileInputStream class
         FileInputStream file = new FileInputStream("C:\\Users\\sharif.ny\\IdeaProjects\\SeleniumProjectWithOutMaven\\src\\T4.xlsx");
 
@@ -32,7 +32,7 @@ public class CalculateNumbersFromExcel {
 
         int rowCount = sheet.getLastRowNum();//return total row numbers
 
-        for (int row=1;row<rowCount;row++){
+        for (int row=1;row<=rowCount;row++){
             XSSFRow currentRow = sheet.getRow(row);
 
             //we can read cells value either directly like bellow code or

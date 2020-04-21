@@ -33,7 +33,7 @@ public class PassingDataToTheApplicationFromExcelSheet {
 
         int rowCount = sheet.getLastRowNum();//return total row numbers
 
-        for (int row=1;row<rowCount;row++){
+        for (int row=1;row<=rowCount;row++){
 
             XSSFRow currentRow = sheet.getRow(row);
 
