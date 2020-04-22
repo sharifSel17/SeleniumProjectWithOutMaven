@@ -21,7 +21,10 @@ public class WindowHandle {
 
         for (String key:elements){
             String st = driver.switchTo().window(key).getTitle();
-            System.out.println(st);
+            //now i want to close child window
+            if(st.equals("Sakinalium | Home"))
+                driver.close();
+                System.out.println(st);
         }
     }
 }
