@@ -19,7 +19,8 @@ public class CalenderDateValidation {
         Select select = new Select(driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/div/div/select")));
         select.selectByVisibleText("2020");
 
-        for (int i=8;i>=1;i--){
+        //if we want to see future month from the calender
+        /*for (int i=8;i>=1;i--){
             Thread.sleep(1000);
             driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/div/a[2]/span")).click();
             //get the month
@@ -29,8 +30,21 @@ public class CalenderDateValidation {
                 driver.findElement(By.linkText("20")).click();
                 break;//once we found expected month, we dont need to for further month
             }
+        }*/
+
+        //if we want to see past month from the calender
+        for (int i=4;i>1;i--){
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/div/a[1]/span")).click();
+            //get the month
+            String month = driver.findElement(By.xpath("//*[@id=\"ui-datepicker-div\"]/div/div/span")).getText();
+            if (month.equals("February")){
+                //in case dynamic date, we need to take link element
+                driver.findElement(By.linkText("20")).click();
+                break;//once we found expected month, we dont need to for further month
+            }
         }
 
-        driver.close();
+        //driver.close();
     }
 }
