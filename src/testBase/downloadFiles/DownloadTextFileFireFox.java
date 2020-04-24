@@ -15,7 +15,7 @@ public class DownloadTextFileFireFox {
         FirefoxProfile profile = new FirefoxProfile();
 
         //set preference
-        profile.setPreference("browser.helperApps.neverAsk","text/plain");
+        profile.setPreference("browser.helperApps.neverAsk.saveToDisk","text/plain");
         profile.setPreference("browser.download.manager.showWhenStarting",false);
         FirefoxOptions options = new FirefoxOptions();
         options.setProfile(profile);
