@@ -35,8 +35,7 @@ public class HowManyLinksWebApplication {
             WebElement elements = links.get(i);
             String url = elements.getAttribute("href");
             //till the above code we got total links from web page
-
-            System.out.println(url);
+            //System.out.println(url);
 
             URL link = new URL(url);
             //creating connection using url object 'link'
