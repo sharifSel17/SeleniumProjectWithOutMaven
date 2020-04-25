@@ -3,4 +3,9 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="10" />
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="SeleniumProject" options="--add-exports jdk.incubator.jpackage/jdk.incubator.jpackage.internal=ALL-UNNAMED" />
+    </option>
+  </component>
 </project>

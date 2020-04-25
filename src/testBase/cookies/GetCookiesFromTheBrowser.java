@@ -3,7 +3,6 @@ package testBase.cookies;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.util.Set;
 
 public class GetCookiesFromTheBrowser {
@@ -20,13 +19,5 @@ public class GetCookiesFromTheBrowser {
         for(Cookie cookie:cookiesLost){
             System.out.println(cookie.getName()+ " - " +cookie.getValue());
         }
-
-
-
-
-
-
-
-
     }
 }
