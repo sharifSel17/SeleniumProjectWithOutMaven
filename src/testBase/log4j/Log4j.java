@@ -20,6 +20,7 @@ public class Log4j {
         System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\drivers\\chromedriver.exe");
         System.setProperty("webdriver.chrome.silentOutput","true");//it's prevent to showing unnecessary logs from the browser site in the console
         WebDriver driver = new ChromeDriver();
+
         driver.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login");
 
 
