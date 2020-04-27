@@ -6,16 +6,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class Log4j {
-    public static void main(String[] args) {
+public class Log4jExample {
+    public static void main(String[] args) throws FileNotFoundException {
 
-        Logger logger = Logger.getLogger("Log4j");
-        PropertyConfigurator.configure("Log4j.properties");
+        Logger logger = Logger.getLogger("Log4jExample");
+        FileInputStream log4jConfPath = new FileInputStream("C:\\Users\\sharif.ny\\IdeaProjects\\SeleniumProjectWithOutMaven\\log4j.properties");
+        PropertyConfigurator.configure(log4jConfPath);
 
         System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\src\\drivers\\chromedriver.exe");
         System.setProperty("webdriver.chrome.silentOutput","true");//it's prevent to showing unnecessary logs from the browser site in the console
