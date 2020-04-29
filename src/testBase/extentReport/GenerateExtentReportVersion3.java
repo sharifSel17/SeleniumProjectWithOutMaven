@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.security.PublicKey;
 
-public class GenerateExtentReport {
+public class GenerateExtentReportVersion3 {
     ExtentReports extents;//specify the location of report
     ExtentTest test;//what details should be populated in the report
 
