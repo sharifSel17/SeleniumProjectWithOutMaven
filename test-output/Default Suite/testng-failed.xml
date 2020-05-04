@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="SeleniumProjectWithOutMaven(failed)">
+    <classes>
+      <class name="testBase.listener.ListenerTest">
+        <methods>
+          <include name="method02"/>
+        </methods>
+      </class> <!-- testBase.listener.ListenerTest -->
+    </classes>
+  </test> <!-- SeleniumProjectWithOutMaven(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
